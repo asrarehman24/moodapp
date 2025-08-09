@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "35271381062",
+    "project_id": "moodpad-flutter-project",
+    "storage_bucket": "moodpad-flutter-project.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35271381062:android:bc0c67064946ac960a3a47",
+        "android_client_info": {
+          "package_name": "com.makingstuffup.mynotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCtQevVxR6Czslb1oO7Ac6GIXJW3N0I3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
