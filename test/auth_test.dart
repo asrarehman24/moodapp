@@ -36,7 +36,7 @@ void main() {
 
     test('Create user should delegate to login function', () async {
       final badEmailUser = provider.createUser(
-        email: "asrarehman@gmail.com",
+        email: "asra@rehman.com",
         password: 'anypassword',
       );
       expect(
@@ -99,7 +99,7 @@ class MockAuthProvider implements AuthProvider {
   @override
   Future<AuthUser> logIn({required String email, required String password}) {
     if (!isInitialized) throw NotInitializedException();
-    if (email == 'asrarehman@gmail.com' && password == 'asrarehman') {
+    if (email == 'asra@rehman.com') {
       throw InvalidCredentialsAuthException();
     }
     if (password == 'asrarehman') throw InvalidCredentialsAuthException();
