@@ -45,7 +45,7 @@ void main() {
       );
       final badPasswordUser = provider.createUser(
         email: 'someone@bar.com',
-        password: 'foobar',
+        password: 'asrarehman',
       );
       expect(
         badPasswordUser,
@@ -87,6 +87,19 @@ class MockAuthProvider implements AuthProvider {
     return logIn(email: email, password: password);
   }
 
+  // @override
+  //   Future<AuthUser> createUser({
+  //     required String email,
+  //     required String password,
+  //   }) async {
+  //     if (!isInitialized) throw NotInitializedException();
+  //     await Future.delayed(const Duration(seconds: 1));
+  //     return logIn(
+  //       email: email,
+  //       password: password,
+  //     );
+  //   }
+
   @override
   AuthUser? get currentUser => _user;
 
@@ -103,7 +116,7 @@ class MockAuthProvider implements AuthProvider {
       throw InvalidCredentialsAuthException();
     }
     if (password == 'asrarehman') throw InvalidCredentialsAuthException();
-    const user = AuthUser(isEmailVerified: false);
+    const user = AuthUser(isEmailVerified: false, email: 'asra@rehman.com');
     _user = user;
     return Future.value(user);
   }
@@ -121,7 +134,7 @@ class MockAuthProvider implements AuthProvider {
     if (!isInitialized) throw NotInitializedException();
     final user = _user;
     if (user == null) throw InvalidCredentialsAuthException();
-    const newUser = AuthUser(isEmailVerified: true);
+    const newUser = AuthUser(isEmailVerified: true, email: 'asra@rehman.com');
     _user = newUser;
   }
 }
