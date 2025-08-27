@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:mynotes/constants/routes.dart';
 import 'package:mynotes/services/Auth/auth_service.dart';
 import 'package:mynotes/services/curds/notes_service.dart';
 
